@@ -16,13 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('v1')->group(function(){
-
-    Route::apiResource('/categories',CategoriesController::class);
-    Route::apiResource('/notes',NotesController::class);
-
-});
-
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
